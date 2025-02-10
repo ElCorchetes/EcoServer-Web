@@ -1,48 +1,57 @@
-# Astro Starter Kit: Basics
+# Hosting Ecológico
 
-```sh
-npm create astro@latest -- --template basics
+Este es un proyecto de una página principal para un servicio de hosting ecológico. El desarrollo de esta página se realizó en el marco del proyecto de sostenibilidad de **DAW 1r**.
+
+## Descripción
+
+El objetivo de este proyecto es concienciar sobre la importancia de un hosting sostenible y ecológico, promoviendo el uso de energías renovables y optimizando el consumo de recursos en servidores.
+
+## Tecnologías Utilizadas
+
+- **Astro**
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+
+## Características
+
+- Diseño responsivo y amigable con el usuario.
+- Optimización de recursos para reducir el impacto ambiental.
+- Información sobre la importancia del hosting ecológico.
+
+## Instalación y Uso
+
+1. Clona este repositorio:
+   ```sh
+   git clone https://github.com/ElCorchetes/EcoServer-Web.git
+   ```
+2. Instala las dependencias:
+   ```sh
+   npm install
+   ```
+3. Inicia el entorno de desarrollo:
+   ```sh
+   npm run dev
+   ```
+4. Abre el navegador en `http://localhost:3000`
+
+## Captura de Pantalla
+
+
+```md
+![Captura de pantalla](/captura.webp)
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Contribuciones
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Si deseas contribuir al proyecto, siéntete libre de hacer un **fork**, realizar cambios y enviar un **pull request**.
 
-## 🚀 Project Structure
+## Autor
 
-Inside of your Astro project, you'll see the following folders and files:
+Desarrollado por **German, Carles, Izan, Alain** como parte del proyecto de sostenibilidad de DAW 1r.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Licencia
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Este proyecto está bajo la licencia **MIT**.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
