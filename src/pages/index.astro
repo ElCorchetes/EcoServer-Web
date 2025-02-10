@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/navbar.astro';
 import PlansCard from '../components/planscard.astro';
 import InfoCard from '../components/infocard.astro';
 import MetricsCard from '../components/metricscard.astro';
-import { Button } from 'free-astro-components'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
 import { WifiOff, Server, Cpu, Cloud, Leaf, Battery, Zap } from 'lucide-astro'
 import './index.css'
 
@@ -13,16 +12,27 @@ import './index.css'
 ---
 
 <Layout>
+	<Modal id="modal-id" sytle="--ac-modal-width-full">
+		<ModalHeader>
+			<h4>Flyer</h4>
+		</ModalHeader>
+		<ModalBody>
+			<img src="/flayer.png" alt="" style="width: 100%;">
+		</ModalBody>
+		<ModalFooter>
+			<Button label="Close" data-modal-close />
+		</ModalFooter>
+	</Modal>
+	
 <div class="cuadricula"></div>
 
 <div class="contenido">
-	<Navbar />
     <h1 class="title">Sustainable Hosting for a <span>Greener Future</span></h1>
     <p class="subtitle">Power your digital presence with eco-friendly hosting solutions. We combine 
 		cutting-edge technology with environmental responsibility.</p>
 	<div class="buttons">
 		<Button label='Get Started'/>
-		<Button label='  Flayer  ' variant='secondary'/>
+		<Button label='Flyer' variant='secondary' data-modal-trigger="modal-id" />
 	</div>
 
 	<div class="metrics-section">

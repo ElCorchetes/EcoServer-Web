@@ -10,23 +10,20 @@
     font-weight: 900;
 }
 
-    /* Reset básico y configuración inicial */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    /* Configuración principal del cuerpo */
     body {
-        min-height: 200vh; /* Altura mínima para permitir scroll */
-        background: #0131F0; /* Color de fondo azul */
+        min-height: 200vh; 
+        background: #0131F0;
         position: relative;
-        overflow-x: hidden; /* Oculta el scroll horizontal */
+        overflow-x: hidden; 
         font-family: 'Nexa'
     }
 
-    /* Estilos para la cuadrícula animada */
     .cuadricula {
         position: fixed;
         width: 100%;
@@ -38,19 +35,17 @@
         animation: moverCuadricula 1s linear infinite;
     }
 
-    /* Animación de movimiento */
     @keyframes moverCuadricula {
         to {
-            background-position: 50px 50px; /* Desplazamiento diagonal */
+            background-position: 50px 50px; 
         }
     }
 
-    /* Estilos del contenido principal */
     .contenido {
         padding: 10vh 20px;
         color: #F0F3FF;
         text-align: center;
-        position: relative; /* Asegura que esté sobre la cuadrícula */
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -117,4 +112,25 @@
         display: flex;
         gap: 1.5rem;
         margin: 2em 0;
+    }
+
+    /* Modal styles */
+    :root {
+        --ac-modal-width: 600px;
+        --ac-modal-max-width: 90%;
+    }
+
+    dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 38%);
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+
+    dialog::backdrop {
+        background: rgba(0, 0, 0, 0.5);
     }
