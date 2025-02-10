@@ -1,0 +1,68 @@
+---
+interface Props {
+  title: string;
+  value: string;
+  description: string;
+  icon: any;
+}
+
+const { title, value, description, icon: Icon } = Astro.props;
+---
+
+<div class="metrics-card">
+  <div class="icon-container">
+    <Icon size={24} />
+  </div>
+  <div class="text-content">
+    <h3>{title}</h3>
+    <p class="value">{value}</p>
+    <p class="description">{description}</p>
+  </div>
+</div>
+
+<style>
+  .metrics-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    width: 30em;
+  }
+
+  .metrics-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .icon-container {
+    padding: 1rem;
+    border-radius: 12px;
+    position: absolute;
+  }
+
+  .text-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .text-content h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .value {
+    color: #15F5BA;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0.5rem 0;
+  }
+
+  .description {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+</style>

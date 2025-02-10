@@ -1,0 +1,107 @@
+---
+interface Props {
+    title: string;
+    price: string;
+    features: string[];
+    popular?: boolean;
+}
+
+const { title, price, features, popular = false } = Astro.props;
+---
+
+<div class={`plan-card ${popular ? 'popular' : ''}`}>
+    {popular && <div class="popular-badge">Most Popular</div>}
+    <h3>{title}</h3>
+    <div class="price">
+        <span class="amount">{price}</span>
+        <span class="period">/mo</span>
+    </div>
+    <ul class="features">
+        {features.map(feature => (
+            <li>{feature}</li>
+        ))}
+    </ul>
+    <button class="select-plan">Select Plan</button>
+</div>
+
+<style>
+    .plan-card {
+        border: 2px solid rgba(21, 245, 186, 0.3);
+        border-radius: 15px;
+        padding: 2rem;
+        width: 300px;
+        position: relative;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .plan-card:hover {
+        border-color: #15F5BA;
+    }
+
+    .popular-badge {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #15F5BA;
+        color: #0131F0;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+
+    h3 {
+        color: #F0F3FF;
+        font-size: 1.5em;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .price {
+        text-align: center;
+        color: #15F5BA;
+        margin: 1.5rem 0;
+    }
+
+    .amount {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    .period {
+        color: #F0F3FF;
+        font-size: 1em;
+    }
+
+    .features {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+        color: #F0F3FF;
+    }
+
+    .features li {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+    .select-plan {
+        width: 100%;
+        padding: 1rem;
+        background: transparent;
+        border: 2px solid #15F5BA;
+        color: #15F5BA;
+        border-radius: 8px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .select-plan:hover {
+        background: #15F5BA;
+        color: #0131F0;
+    }
+</style>

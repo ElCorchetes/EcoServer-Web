@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/navbar.astro';
+import PlansCard from '../components/planscard.astro';
+import InfoCard from '../components/infocard.astro';
+import MetricsCard from '../components/metricscard.astro';
+import { Button } from 'free-astro-components'
+import { WifiOff, Server, Cpu, Cloud, Leaf, Battery, Zap } from 'lucide-astro'
+import './index.css'
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+<div class="cuadricula"></div>
+
+<div class="contenido">
+	<Navbar />
+    <h1 class="title">Sustainable Hosting for a <span>Greener Future</span></h1>
+    <p class="subtitle">Power your digital presence with eco-friendly hosting solutions. We combine 
+		cutting-edge technology with environmental responsibility.</p>
+	<div class="buttons">
+		<Button label='Get Started'/>
+		<Button label='  Flayer  ' variant='secondary'/>
+	</div>
+
+	<div class="metrics-section">
+		<h2>Our Environmental Impact</h2>
+		<div class="metrics-grid">
+			<MetricsCard
+				title="Carbon Offset"
+				value="2,500 tons"
+				description="CO2 emissions offset through renewable energy"
+				icon={Leaf}
+			/>
+			<MetricsCard
+				title="Energy Saved"
+				value="75%"
+				description="Less energy consumption than traditional hosting"
+				icon={Battery}
+			/>
+			<MetricsCard
+				title="Green Power"
+				value="100%"
+				description="Powered by renewable energy sources"
+				icon={Zap}
+			/>
+		</div>
+	</div>
+
+	<div class="info-cards">
+		<h1>Our Services</h1>
+		<div class="info-cards-grid">
+			<InfoCard
+				title="Cloud Hosting"
+				description="Scalable, eco-friendly cloud solutions powered by renewable energy."
+				icon={Cloud}
+			/>
+			<InfoCard
+				title="VPS Hosting"
+				description="High-performance virtual servers with minimal environmental impact."
+				icon={Server}
+			/>
+			<InfoCard
+				title="Dedicated Servers"
+				description="Powerful dedicated hardware, responsibly sourced and energy-efficient."
+				icon={Cpu}
+			/>
+		</div>
+	</div>
+
+	<div class="pricing-plans">
+		<PlansCard
+			title="Basic"
+			price="$9.99"
+			features={[
+				"2GB SSD Storage",
+				"10GB Monthly Bandwidth",
+				"1 Website Hosting",
+				"24/7 Support",
+				"99.9% Uptime Guarantee"
+			]}
+		/>
+		<PlansCard
+			title="Professional"
+			price="$24.99"
+			features={[
+				"10GB SSD Storage",
+				"100GB Monthly Bandwidth",
+				"5 Website Hosting",
+				"Priority Support",
+				"99.9% Uptime Guarantee",
+			]}
+			popular={true}
+		/>
+		<PlansCard
+			title="Enterprise"
+			price="$49.99"
+			features={[
+				"50GB SSD Storage",
+				"Unlimited Bandwidth",
+				"Priority Support",
+				"99.9% Uptime Guarantee",
+				"Daily Backups"
+			]}
+		/>
+	</div>
+</div>
+</Layout>
