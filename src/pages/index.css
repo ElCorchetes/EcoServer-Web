@@ -2,12 +2,14 @@
     font-family: 'Nexa';
     src: url('../assets/fonts/Nexa-ExtraLight.ttf') format('truetype');
     font-weight: 200;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Nexa';
     src: url('../assets/fonts/Nexa-Heavy.ttf') format('truetype');
     font-weight: 900;
+    font-display: swap;
 }
 
     * {
